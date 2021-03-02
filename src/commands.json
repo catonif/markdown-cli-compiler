@@ -1,0 +1,139 @@
+{
+	"input": {
+		"desc": "Markdown/directory input path",
+		"type": "string",
+		"alias": "i",
+		"demandOption": true,
+		"nargs": 1
+	},
+
+	"output": {
+		"desc": "HTML output path\nDefault is the input with an .html extension",
+		"type": "string",
+		"alias": "o",
+		"nargs": 1
+	},
+
+	"styles": {
+		"desc": "CSS paths that will be referenced",
+		"type": "array",
+		"alias": "s"
+	},
+
+	"copiedStyles": {
+		"desc": "CSS file paths that will be copied over",
+		"type": "array"
+	},
+
+	"plugins": {
+		"desc": "Plugins to use separated by a space",
+		"type": "array",
+		"alias": "p"
+	},
+
+	"hls": {
+		"desc": "highlight.js theme",
+		"type": "string"
+	},
+
+	"enc": {
+		"desc": "Input file encoding",
+		"type": "string",
+		"default": "utf8"
+	},
+
+	"html": {
+		"desc": "Enable HTML tags in source",
+		"type": "boolean",
+		"default": false
+	},
+
+	"xhtmlOut": {
+		"desc": "Use '/' to close single tags (<br />).\nThis is only for full CommonMark compatibility",
+		"type": "boolean",
+		"default": false
+	},
+
+	"breaks": {
+		"desc": "Convert '\\n' in paragraphs into <br>",
+		"type": "boolean",
+		"default": false
+	},
+
+	"langPrefix": {
+		"desc": "CSS language prefix for fenced blocks. Can be useful for external highlighters",
+		"type": "string",
+		"default": "language-"
+	},
+
+	"linkify": {
+		"desc": "Autoconvert URL-like text to links",
+		"type": "boolean",
+		"default": false
+	},
+
+	"typographer": {
+		"desc": "https://bit.ly/Typographer-Replacements",
+		"type": "boolean",
+		"default": false
+	},
+
+	"quotes": {
+		"desc": "Double + single quotes replacement pairs, when typographer enabled, and smartquotes on",
+		"type": "array",
+		"default": "“”‘’"
+	},
+
+	"noOk": {
+		"desc": "Doesn't emit success messages",
+		"type": "boolean",
+		"default": false
+	},
+
+	"noWarn": {
+		"desc": "Doesn't emit warning messages",
+		"type": "boolean",
+		"default": false
+	},
+
+	"failOnWarn": {
+		"desc": "Stops the program when encaunters a warning",
+		"type": "boolean",
+		"default": false
+	},
+
+	"debug": {
+		"desc": "Doesn't quit on fail",
+		"type": "boolean",
+		"default": false
+	},
+
+	"comment": {
+		"desc": "Adds a comment in the HTML with the command called.",
+		"type": "boolean",
+		"default": false
+	},
+
+	"force": {
+		"desc": "Doesn't emit a warning before overriding a file",
+		"type": "boolean",
+		"default": false
+	},
+
+	"ignore": {
+		"desc": "Doesn't compile",
+		"type": "boolean",
+		"default": false
+	},
+	
+	"title": {
+		"desc": "What to write in the HTML <title> tag",
+		"type": "string"
+	},
+	
+	"inlineStyle": {
+		"desc": "A piece of css to write in a <style> tag",
+		"type": "string"
+	}
+
+}

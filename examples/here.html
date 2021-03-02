@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head><style>/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #272822;
+  color: #ddd;
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+  color: #f92672;
+}
+
+.hljs-code {
+  color: #66d9ef;
+}
+
+.hljs-class .hljs-title {
+  color: white;
+}
+
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #bf79db;
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #a6e22e;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold;
+}
+</style></head><body><h1>markdown-cli-compiler</h1>
+<p>Hello, this readme is a WIP.</p>
+<h2>Installation</h2>
+<pre class="hljs"><code>npm i -g markdown-cli-compiler
+</code></pre>
+<h2>Usage</h2>
+<pre class="hljs"><code>mdc &lt;args&gt;
+</code></pre>
+<h2>CLI arguments</h2>
+<ul>
+<li><code>--ignore</code>: boolean. Doesn’t run the command. Useful in a <code>mdconfig.json</code>.</li>
+</ul>
+<h3>File I/O args</h3>
+<ul>
+<li><code>--input</code> or <code>-i</code>: string. the input file path. Can be a Markdown file or a directory.</li>
+<li><code>--output</code> or <code>-o</code>: string. The output path. By default it’s the input file name with an additional <code>.html</code> extension.</li>
+<li><code>--enc</code>: string. Input Markdown file encoding (<a href="https://nodejs.org/api/buffer.html#buffer_buffers_and_character_encodings">list of supported encodings</a>). It’s also used for the mdconfig.json. <strong>Default</strong>: <code>utf8</code></li>
+</ul>
+<h3>Content args</h3>
+<ul>
+<li><code>--plugins</code> or <code>-p</code>: array. The names of the plugins to use. Works without the <code>markdown-it-</code> prefix too. <a href="https://www.npmjs.com/search?q=keywords:markdown-it-plugin">got from here</a>. <strong>eg</strong>: <code>--plugins mark ins</code></li>
+<li><code>--styles</code> or <code>-s</code>: array. The paths of the CSS files that will be linked in a <code>&lt;link&gt;</code> tag in the head of the output html file.</li>
+<li><code>--hls</code>: string. The name of an highlight.js theme (<a href="https://github.com/highlightjs/highlight.js/tree/master/src/styles">list of themes</a>). <strong>eg</strong>: <code>--hls monokai</code></li>
+<li><code>--copiedStyles</code>: array. The paths of the CSS files whose content will be copied and pasted into the output html. Paths should be relative to the output path.</li>
+<li><code>--inlineStyle</code>: string. Raw CSS to write as it is into a <code>&lt;style&gt;</code> tag.</li>
+<li><code>--title</code>: string. Goes in the <code>&lt;title&gt;</code> tag.</li>
+<li><code>--comment</code>: boolean. Adds to the html output a comment after <code>&lt;!DOCTYPE html&gt;</code> with in it the command called with all the args.</li>
+</ul>
+<h3>CLI behaviour args</h3>
+<ul>
+<li><code>--force</code>: boolean. Doesn’t emit a warning before overriding a file. (I wanted the “Are you sure you want to override the file?”, but since I haven’t made it yet, this doesn’t really make sense).</li>
+<li><code>--noOk</code>: boolean. Doesn’t emit success messages.</li>
+<li><code>--noWarn</code>: boolean. Doesn’t emit warning messages.</li>
+<li><code>--failOnWarn</code>: boolean. Stops the program when encounters a warning.</li>
+<li><code>--debug</code>: boolean. Doesn’t quit on fail.</li>
+</ul>
+<h3>markdown-it args</h3>
+<ul>
+<li><code>--html</code>, <code>--xhtmlOut</code>, <code>--breaks</code>, <code>--langPrefix</code>, <code>--linkify</code>, <code>--typographer</code> and <code>--quotes</code> (all: boolean) are explained <a href="https://github.com/markdown-it/markdown-it#readme">here</a>.</li>
+</ul>
+<h2>mdconfig.json</h2>
+<p>If the input field is a directory, the program will look for a file named <code>mdconfig.json</code> there. It has to be an array of json objects with configurations that work the same way as the <a href="#CLI-arguments">cli args</a>. Aliases like <code>-i</code>, <code>-o</code> and <code>-s</code> will not work. <a href="https://github.com/catonif/markdown-cli-compiler/blob/main/examples/mdconfig.json"><strong>Example</strong></a>.</p>
+</body>

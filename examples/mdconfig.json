@@ -1,0 +1,20 @@
+[
+	{
+		"input": "../readme.md",
+		"output": "here.html",
+		"hls": "monokai",
+		"typographer": true,
+		"noOk": true
+	},
+
+	{
+		"input": "test.md",
+		"typographer": true,
+		"force": true,
+		"failOnWarn": true,
+		"comment": true,
+		"plugins": [
+			"mark", "texmath", "sub", "sup", "kbd", "emoji", "deflist", "abbr", "anchor"
+		]
+	}
+]

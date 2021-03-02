@@ -1,0 +1,73 @@
+{
+	"name": "markdown-cli-compiler",
+	"description": "Converts a markdown file to an HTML one using markdown-it and a lot of plugins.",
+	"version": "0.1.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/catonif/markdown-cli-compiler.git"
+	},
+	"author": {
+		"name": "catonif",
+		"url": "https://catonif.github.io",
+		"email": "catonif.dev@gmail.com"
+	},
+	"dependencies": {
+		"glob": "^7.1.6",
+		"highlight.js": "^10.6.0",
+		"katex": "^0.12.0",
+		"markdown-it": "^12.0.4",
+		"markdown-it-abbr": "^1.0.4",
+		"markdown-it-anchor": "^7.0.2",
+		"markdown-it-attrs": "^4.0.0",
+		"markdown-it-center-text": "^1.0.4",
+		"markdown-it-classy": "^0.2.0",
+		"markdown-it-codetabs": "^1.2.0",
+		"markdown-it-collapsible": "^1.0.0",
+		"markdown-it-color": "^2.1.0",
+		"markdown-it-deflist": "^2.1.0",
+		"markdown-it-emoji": "^2.0.0",
+		"markdown-it-emph": "^1.1.0",
+		"markdown-it-expand-tabs": "^1.0.13",
+		"markdown-it-footnote": "^3.0.2",
+		"markdown-it-imsize": "^2.0.1",
+		"markdown-it-inline-comments": "^1.0.1",
+		"markdown-it-ins": "^3.0.1",
+		"markdown-it-jsx": "^1.1.0",
+		"markdown-it-kbd": "^2.2.0",
+		"markdown-it-mark": "^3.0.1",
+		"markdown-it-multimd-table": "^4.0.3",
+		"markdown-it-ruby": "git+https://github.com/catonif/markdown-it-ruby.git",
+		"markdown-it-small": "^1.0.0",
+		"markdown-it-smartarrows": "^1.0.1",
+		"markdown-it-spoiler": "^1.1.1",
+		"markdown-it-sub": "^1.0.0",
+		"markdown-it-sup": "^1.0.0",
+		"markdown-it-task-lists": "^2.1.1",
+		"markdown-it-texmath": "^0.8.0",
+		"markdown-it-title": "^3.0.0",
+		"markdown-it-toc": "^1.1.0",
+		"markdown-it-underline": "^1.0.1",
+		"path": "^0.12.7",
+		"yargs": "^16.2.0",
+		"yargs-parser": "^20.2.5"
+	},
+	"devDependencies": {
+		"@types/node": "^14.14.31",
+		"@types/yargs": "^16.0.0"
+	},
+	"bin": {
+		"mdc": "./index.js"
+	},
+	"preferGlobal": true,
+	"license": "MIT",
+	"keywords": [
+		"markdown",
+		"markdown-it",
+		"cli",
+		"html"
+	],
+	"bugs": {
+		"url": "https://github.com/catonif/markdown-cli-compiler/issues/"
+	},
+	"homepage": "https://github.com/catonif/markdown-cli-compiler/"
+}

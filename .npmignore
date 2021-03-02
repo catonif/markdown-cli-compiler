@@ -1,0 +1,7 @@
+/node_modules
+/examples
+/index.ts
+/src/argser.ts
+/src/emit.ts
+/tsconfig.json
+/install.ps1
